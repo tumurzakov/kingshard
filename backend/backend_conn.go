@@ -436,9 +436,9 @@ func (c *Conn) SetCharset(charset string, collation mysql.CollationId) error {
 		collation = mysql.CollationNames[mysql.Charsets[charset]]
 	}
 
-	if c.charset == charset && c.collation == collation {
-		return nil
-	}
+	//if c.charset == charset && c.collation == collation {
+	//	return nil
+	//}
 
 	_, ok := mysql.CharsetIds[charset]
 	if !ok {
